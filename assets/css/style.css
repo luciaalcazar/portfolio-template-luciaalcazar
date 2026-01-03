@@ -1,0 +1,51 @@
+/* -----------------------------
+   RESET
+----------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* -----------------------------
+   VARIABLES
+----------------------------- */
+
+:root {
+  --color-bg: #ffffff;
+  --color-text: #111111;
+  --color-accent: #0066ff;
+
+  --font-base: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+}
+
+/* -----------------------------
+   BASE STYLES
+----------------------------- */
+
+body {
+  font-family: var(--font-base);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+header,
+main,
+footer {
+  padding: var(--space-md);
+}
+
+header {
+  border-bottom: 1px solid #eaeaea;
+}
+
+footer {
+  border-top: 1
