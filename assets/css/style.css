@@ -144,8 +144,10 @@ nav a:hover {
 
 .footer-content {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  flex-wrap: nowrap;
 }
 
 .footer-nav ul {
@@ -162,4 +164,75 @@ nav a:hover {
 
 .site-footer a:hover {
   text-decoration: underline;
+}
+/* -----------------------------
+   FOOTER DESIGN
+----------------------------- */
+
+.site-footer {
+  border-top: 1px solid #eaeaea;
+  padding: var(--space-md);
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+/* Regular text */
+.footer-copy,
+.footer-label,
+.footer-github,
+.footer-top {
+  font-weight: 400;
+}
+
+/* Socials block */
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.footer-socials ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: var(--space-sm);
+}
+
+/* Light links */
+.footer-socials a {
+  font-weight: 300;
+  color: #666;
+  text-decoration: none;
+}
+
+.footer-socials a:hover {
+  text-decoration: underline;
+}
+
+/* Links regular */
+.footer-github a,
+.footer-top a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.footer-github a:hover,
+.footer-top a:hover {
+  text-decoration: underline;
+}
+
+.site-footer {
+  border-top: 1px solid #eaeaea;
+  padding: var(--space-md);
+}
+
+.site-footer .footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
 }
