@@ -131,62 +131,28 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* -----------------------------
-   FOOTER
------------------------------ */
+/* =============================
+   FOOTER FINAL LAYOUT
+============================= */
 
 .site-footer {
-  margin-top: var(--space-lg);
-  padding: var(--space-md);
   border-top: 1px solid #eaeaea;
+  padding: var(--space-md);
   font-size: 0.9rem;
 }
 
 .footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--space-lg);
-  flex-wrap: nowrap;
 }
 
-.footer-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: var(--space-sm);
-}
-
-.site-footer a {
-  text-decoration: none;
-  color: var(--color-text);
-}
-
-.site-footer a:hover {
-  text-decoration: underline;
-}
-/* -----------------------------
-   FOOTER DESIGN
------------------------------ */
-
-.site-footer {
-  border-top: 1px solid #eaeaea;
-  padding: var(--space-md);
-  font-size: 0.9rem;
-}
-
-.footer-content {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-lg);
-  flex-wrap: wrap;
-}
-
-/* Regular text */
-.footer-copy,
-.footer-label,
-.footer-github,
-.footer-top {
+/* © 2026 */
+.footer-copy {
   font-weight: 400;
 }
 
@@ -197,6 +163,11 @@ nav a:hover {
   gap: 0.25rem;
 }
 
+.footer-label {
+  font-weight: 400;
+}
+
+/* Social links (light) */
 .footer-socials ul {
   list-style: none;
   padding: 0;
@@ -204,10 +175,9 @@ nav a:hover {
   gap: var(--space-sm);
 }
 
-/* Light links */
 .footer-socials a {
   font-weight: 300;
-  color: #666;
+  color: #777;
   text-decoration: none;
 }
 
@@ -215,9 +185,10 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Links regular */
+/* GitHub + Back to top */
 .footer-github a,
 .footer-top a {
+  font-weight: 400;
   color: var(--color-text);
   text-decoration: none;
 }
@@ -225,14 +196,4 @@ nav a:hover {
 .footer-github a:hover,
 .footer-top a:hover {
   text-decoration: underline;
-}
-
-.site-footer {
-  border-top: 1px solid #eaeaea;
-  padding: var(--space-md);
-}
-
-.site-footer .footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
 }
