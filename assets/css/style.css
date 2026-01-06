@@ -197,3 +197,47 @@ nav a:hover {
 .footer-top a:hover {
   text-decoration: underline;
 }
+
+/* =============================
+   HEADER FINAL
+============================= */
+
+.site-header {
+  border-bottom: 1px solid #eaeaea;
+  padding: 1.5rem 2rem;
+}
+
+.header-content {
+  max-width: 1450px;   
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.site-logo {
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Navigation */
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: var(--space-md);
+  padding: 0;
+  margin: 0;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 400;
+}
+
+.site-nav a:hover {
+  text-decoration: underline;
+}
