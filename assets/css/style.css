@@ -156,12 +156,7 @@ nav a:hover {
   font-weight: 400;
 }
 
-/* Socials block */
-.footer-socials {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
+
 
 .footer-label {
   font-weight: 400;
@@ -204,7 +199,7 @@ nav a:hover {
 
 .site-header {
   border-bottom: 1px solid #eaeaea;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 2rem; /* ← este es el que manda */
 }
 
 .header-content {
@@ -239,5 +234,72 @@ nav a:hover {
 }
 
 .site-nav a:hover {
+  text-decoration: underline;
+}
+
+/* =============================
+   FOOTER FINAL (ALINEADO CON HEADER)
+============================= */
+
+.site-footer {
+  border-top: 1px solid #eaeaea;
+  padding: 1.5rem 2rem;
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  max-width: 1450px;          /* MISMO valor que header */
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Left */
+.footer-copy {
+  font-weight: 400;
+}
+
+/* Center socials */
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-label {
+  font-weight: 400;
+}
+
+.footer-socials ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.footer-socials a {
+  font-weight: 300;
+  color: #777;
+  text-decoration: none;
+}
+
+.footer-socials a:hover {
+  text-decoration: underline;
+}
+
+/* Right */
+.footer-github a,
+.footer-top a {
+  font-weight: 400;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.footer-github a:hover,
+.footer-top a:hover {
   text-decoration: underline;
 }
