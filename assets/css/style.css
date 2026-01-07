@@ -66,14 +66,10 @@ footer {
   justify-content: space-between;
 }
 
-/* Logo */
-
 .site-logo {
   font-size: 1rem;
   font-weight: 500;
 }
-
-/* Navigation */
 
 .site-nav ul {
   list-style: none;
@@ -91,7 +87,7 @@ footer {
 }
 
 /* -----------------------------
-   MAIN LAYOUT
+   MAIN
 ----------------------------- */
 
 main {
@@ -135,21 +131,40 @@ section p {
 }
 
 /* =============================
-   HERO
+   HERO (IMAGEN COMPLETA)
 ============================= */
 
 .hero {
-  width: 100%;
-  padding: 4rem 2rem;
+  position: relative;
+  padding: 6rem 2rem;
+  min-height: 75vh;
+
+  background-image: url("../img/fondopantalla.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;   /* 🔑 NO RECORTA */
+  background-color: #000;     /* relleno negro */
 }
 
+/* overlay suave */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* contenido */
 .hero-content {
+  position: relative;
+  z-index: 1;
+
   max-width: 1450px;
   margin: 0 auto;
 
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .hero-text {
@@ -157,10 +172,12 @@ section p {
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.6;
+  color: #ffffff;
 }
 
 .hero-scroll {
   font-size: 0.9rem;
+  color: #ffffff;
 }
 
 .hero-scroll:hover {
@@ -186,13 +203,9 @@ section p {
   justify-content: space-between;
 }
 
-/* Left */
-
 .footer-copy {
   font-weight: 400;
 }
-
-/* Center socials */
 
 .footer-socials {
   display: flex;
@@ -218,8 +231,6 @@ section p {
 .footer-socials a:hover {
   text-decoration: underline;
 }
-
-/* Right */
 
 .footer-github a,
 .footer-top a {
