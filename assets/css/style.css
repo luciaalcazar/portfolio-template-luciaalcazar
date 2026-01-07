@@ -29,10 +29,6 @@
 /* -----------------------------
    BASE STYLES
 ----------------------------- */
-a {
-  color: inherit;
-  text-decoration: none;
-}
 
 body {
   font-family: var(--font-base);
@@ -41,22 +37,61 @@ body {
   line-height: 1.5;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 header,
 main,
 footer {
   padding: var(--space-md);
 }
 
-header {
+/* -----------------------------
+   HEADER
+----------------------------- */
+
+.site-header {
   border-bottom: 1px solid #eaeaea;
+  padding: 1.5rem 2rem;
 }
 
-footer {
-  border-top: 1px solid #eaeaea;
+.header-content {
+  max-width: 1450px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-  /* -----------------------------
-   LAYOUT · SECTIONS (Mobile First)
+/* Logo */
+
+.site-logo {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Navigation */
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  gap: var(--space-md);
+}
+
+.site-nav a {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.site-nav a:hover {
+  text-decoration: underline;
+}
+
+/* -----------------------------
+   MAIN LAYOUT
 ----------------------------- */
 
 main {
@@ -65,10 +100,12 @@ main {
   gap: var(--space-lg);
 }
 
-/* Sections */
+/* Sections (except hero) */
 
-section {
+section:not(.hero) {
   max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 section h2 {
@@ -81,22 +118,12 @@ section p {
   color: #444;
 }
 
-/* Hero */
-
-#hero {
-  padding-top: var(--space-lg);
-}
 /* -----------------------------
-   RESPONSIVE · DESKTOP
+   RESPONSIVE
 ----------------------------- */
 
 @media (min-width: 768px) {
-
-  main {
-    align-items: center;
-  }
-
-  section {
+  section:not(.hero) {
     max-width: 960px;
   }
 
@@ -105,144 +132,43 @@ section p {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-md);
   }
-
-}
-
-/* -----------------------------
-   NAVIGATION
------------------------------ */
-
-nav {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: var(--space-sm);
-  padding: 0;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--color-text);
-  font-size: 0.9rem;
-}
-
-nav a:hover {
-  text-decoration: underline;
 }
 
 /* =============================
-   FOOTER FINAL LAYOUT
+   HERO
 ============================= */
 
-.site-footer {
-  border-top: 1px solid #eaeaea;
-  padding: var(--space-md);
-  font-size: 0.9rem;
+.hero {
+  width: 100%;
+  padding: 4rem 2rem;
 }
 
-.footer-content {
-  max-width: 1200px;
+.hero-content {
+  max-width: 1450px;
   margin: 0 auto;
 
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: var(--space-lg);
+  align-items: center;
 }
 
-/* © 2026 */
-.footer-copy {
+.hero-text {
+  max-width: 600px;
+  font-size: 1.2rem;
   font-weight: 400;
+  line-height: 1.6;
 }
 
-
-
-.footer-label {
-  font-weight: 400;
+.hero-scroll {
+  font-size: 0.9rem;
 }
 
-/* Social links (light) */
-.footer-socials ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: var(--space-sm);
-}
-
-.footer-socials a {
-  font-weight: 300;
-  color: #777;
-  text-decoration: none;
-}
-
-.footer-socials a:hover {
-  text-decoration: underline;
-}
-
-/* GitHub + Back to top */
-.footer-github a,
-.footer-top a {
-  font-weight: 400;
-  color: var(--color-text);
-  text-decoration: none;
-}
-
-.footer-github a:hover,
-.footer-top a:hover {
+.hero-scroll:hover {
   text-decoration: underline;
 }
 
 /* =============================
-   HEADER FINAL
-============================= */
-
-.site-header {
-  border-bottom: 1px solid #eaeaea;
-  padding: 1.5rem 2rem; /* ← este es el que manda */
-}
-
-.header-content {
-  max-width: 1450px;   
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* Logo */
-.site-logo {
-  text-decoration: none;
-  color: var(--color-text);
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-/* Navigation */
-.site-nav ul {
-  list-style: none;
-  display: flex;
-  gap: var(--space-md);
-  padding: 0;
-  margin: 0;
-}
-
-.site-nav a {
-  text-decoration: none;
-  color: var(--color-text);
-  font-weight: 400;
-}
-
-.site-nav a:hover {
-  text-decoration: underline;
-}
-
-/* =============================
-   FOOTER FINAL (ALINEADO CON HEADER)
+   FOOTER
 ============================= */
 
 .site-footer {
@@ -252,7 +178,7 @@ nav a:hover {
 }
 
 .footer-content {
-  max-width: 1450px;          /* MISMO valor que header */
+  max-width: 1450px;
   margin: 0 auto;
 
   display: flex;
@@ -261,11 +187,13 @@ nav a:hover {
 }
 
 /* Left */
+
 .footer-copy {
   font-weight: 400;
 }
 
 /* Center socials */
+
 .footer-socials {
   display: flex;
   align-items: center;
@@ -278,17 +206,13 @@ nav a:hover {
 
 .footer-socials ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   gap: 1.5rem;
-  justify-content: center;
 }
 
 .footer-socials a {
   font-weight: 300;
   color: #777;
-  text-decoration: none;
 }
 
 .footer-socials a:hover {
@@ -296,56 +220,13 @@ nav a:hover {
 }
 
 /* Right */
+
 .footer-github a,
 .footer-top a {
   font-weight: 400;
-  color: var(--color-text);
-  text-decoration: none;
 }
 
 .footer-github a:hover,
 .footer-top a:hover {
-  text-decoration: underline;
-}
-
-/* =============================
-   HERO
-============================= */
-
-.hero {
-  padding: 6rem 2rem;
-}
-
-.hero-content {
-  max-width: 1450px; /* mismo ancho que header */
-  margin: 0 auto;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.hero-text {
-  max-width: 600px;
-}
-
-.hero h1 {
-  font-size: 2rem;
-  font-weight: 400; /* IMPORTANTE: no bold */
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1rem;
-  color: #555;
-}
-
-.hero-scroll a {
-  text-decoration: none;
-  color: var(--color-text);
-  font-size: 0.9rem;
-}
-
-.hero-scroll a:hover {
   text-decoration: underline;
 }
