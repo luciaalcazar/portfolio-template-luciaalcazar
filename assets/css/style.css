@@ -27,7 +27,7 @@
 }
 
 /* -----------------------------
-   BASE STYLES
+   BASE
 ----------------------------- */
 
 body {
@@ -60,7 +60,6 @@ footer {
 .header-content {
   max-width: 1450px;
   margin: 0 auto;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -100,22 +99,18 @@ main {
 
 .hero {
   position: relative;
-  min-height: 55vh;          /* equilibrio visual */
-  padding: 5rem 2rem;
-  display: flex;
-  align-items: center;
+  padding: 4.5rem 2rem;
+  min-height: 50vh;
   overflow: hidden;
-  background-color: var(--color-bg);
 }
 
 .hero-content {
   max-width: 1450px;
   margin: 0 auto;
-  width: 100%;
 
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   gap: 4rem;
 
   position: relative;
@@ -128,10 +123,10 @@ main {
   line-height: 1.6;
 }
 
-/* BOTÓN HERO */
+/* Botón hero */
 
 .hero-button {
-  margin-top: 2.5rem;
+  margin-top: 2rem;
   display: inline-block;
 
   padding: 0.75rem 2.5rem;
@@ -140,7 +135,6 @@ main {
 
   font-size: 0.9rem;
   font-family: inherit;
-  font-weight: 400;
   color: #111;
 
   cursor: pointer;
@@ -151,9 +145,7 @@ main {
   background-color: #e9a6b8;
 }
 
-/* =============================
-   HERO ILLUSTRATION
-============================= */
+/* Ilustración hero */
 
 .hero-illustration {
   position: absolute;
@@ -161,45 +153,11 @@ main {
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
-  z-index: 1;
 }
 
 .hero-illustration img {
-  width: 420px;
+  width: 400px;
   max-width: 38vw;
-}
-
-/* =============================
-   FOOTER
-============================= */
-
-.site-footer {
-  border-top: 1px solid #eaeaea;
-  padding: 1.5rem 2rem;
-  font-size: 0.9rem;
-}
-
-.footer-content {
-  max-width: 1450px;
-  margin: 0 auto;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-socials ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-.footer-socials a {
-  color: #777;
-}
-
-.footer-socials a:hover {
-  text-decoration: underline;
 }
 
 /* =============================
@@ -207,7 +165,7 @@ main {
 ============================= */
 
 .about {
-  padding: 6rem 3rem;
+  padding: 8rem 3rem;   /* ⬆️ más espacio arriba y abajo */
 }
 
 .about-content {
@@ -216,11 +174,51 @@ main {
 
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  gap: 4rem;
+  gap: 6rem;            /* ⬅️ antes estaba muy apretado */
+  align-items: start;
 }
 
+.about h2 {
+  margin-bottom: 1.5rem;
+}
+
+.about p {
+  line-height: 1.7;
+  max-width: 520px;
+}
+
+.about p:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+/* Texto */
+
+.about-bio p {
+  max-width: 520px;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Skills */
+
+.about-skills h3 {
+  margin-bottom: 1.25rem;
+}
+
+.about-skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-skills li {
+  margin-bottom: 0.75rem;  /* aire vertical */
+  color: #444;
+}
+
+/* Imagen */
+
 .about-image {
-  max-width: 260px;
+  max-width: 240px;
   aspect-ratio: 3 / 4;
   overflow: hidden;
 }
@@ -236,17 +234,47 @@ main {
 ============================= */
 
 .contact {
-  padding: 6rem 2rem;
+  padding: 5rem 2rem;
 }
 
 .contact-content {
-  max-width: 1450px;
+  max-width: 1100px;      /* 🔑 igual que about */
   margin: 0 auto;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6rem;
+  gap: 4rem;
+  align-items: start;
 }
+
+/* Texto izquierda */
+
+.contact-text ul {
+  list-style: none;     /* ❌ quita los puntos */
+  padding: 0;
+  margin: 1.5rem 0;     /* aire arriba y abajo */
+}
+
+.contact-text p {
+  max-width: 420px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.contact-text h2 {
+  margin-bottom: 1rem;
+}
+
+.contact-text p {
+  margin-bottom: 1.5rem;
+  max-width: 420px;
+}
+
+.contact-text ul li {
+  margin-bottom: 0.75rem;  /* espacio entre Instagram / LinkedIn */
+}
+
+/* Formulario */
 
 .contact-form {
   display: flex;
@@ -254,11 +282,29 @@ main {
   gap: 1.5rem;
 }
 
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
 .form-group input,
 .form-group textarea {
   border: none;
   border-bottom: 1px solid #ccc;
   padding: 0.5rem 0;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
 }
 
 .form-group input:focus,
@@ -267,12 +313,23 @@ main {
   border-bottom-color: #111;
 }
 
+/* Botón */
+
 .contact-button {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
+  align-self: flex-start;
+
   background-color: var(--color-accent);
   border: none;
   padding: 0.75rem 2.5rem;
+
+  font-size: 0.9rem;
+  font-family: inherit;
   cursor: pointer;
+}
+
+.contact-button:hover {
+  background-color: #e9a6b8;
 }
 
 /* =============================
@@ -331,4 +388,37 @@ section.projects {
 .project-card:hover .project-overlay {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* =============================
+   FOOTER
+============================= */
+
+.site-footer {
+  border-top: 1px solid #eaeaea;
+  padding: 1.5rem 2rem;
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  max-width: 1450px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-socials ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-socials a {
+  color: #777;
+}
+
+.footer-socials a:hover {
+  text-decoration: underline;
 }
