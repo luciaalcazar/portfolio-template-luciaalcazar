@@ -131,34 +131,16 @@ section p {
 }
 
 /* =============================
-   HERO (IMAGEN COMPLETA)
+   HERO (LIMPIO, SIN IMAGEN)
 ============================= */
 
 .hero {
-  position: relative;
   padding: 6rem 2rem;
-  min-height: 75vh;
-
-  background-image: url("../img/fondopantalla.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;   /* 🔑 NO RECORTA */
-  background-color: #000;     /* relleno negro */
+  min-height: 60vh;
+  background-color: var(--color-bg);
 }
 
-/* overlay suave */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-}
-
-/* contenido */
 .hero-content {
-  position: relative;
-  z-index: 1;
-
   max-width: 1450px;
   margin: 0 auto;
 
@@ -172,17 +154,18 @@ section p {
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.6;
-  color: #ffffff;
+  color: var(--color-text);
 }
 
 .hero-scroll {
   font-size: 0.9rem;
-  color: #ffffff;
+  color: var(--color-text);
 }
 
 .hero-scroll:hover {
   text-decoration: underline;
 }
+
 
 /* =============================
    FOOTER
