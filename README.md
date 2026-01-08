@@ -1,14 +1,13 @@
 # Portfolio Template
 
-🔗 Live site: https://luciaalcazar.github.io
+🔗 Live site: https://luciaalcazar.github.io/portfolio-template-luciaalcazar/
 
 ## Description
-Personal portfolio website showcasing illustration and 3D projects.
+Personal portfolio template built with HTML and CSS.
 
 ## Tech Stack
 - HTML5
 - CSS3
-- JavaScript
 - GitHub Pages
 
 ## Setup
@@ -16,11 +15,12 @@ Personal portfolio website showcasing illustration and 3D projects.
 2. Open index.html in your browser
 
 ## Customization
-Replace images in assets/img and update content in the HTML files.
+Replace images and text inside the HTML files.
+
+## Screenshots
+(Add screenshots here)
 
 ## AI Usage
-This project used AI assistance.
+This project used AI assistance following a planning-first approach.
 See docs/plan1.md for details.
 
-## Credits
-Design & development by Lucía Alcázar
