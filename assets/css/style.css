@@ -123,6 +123,27 @@ main {
   line-height: 1.6;
 }
 
+.hero-text h1 {
+  font-weight: 400;      /* más ligera */
+  line-height: 1.25;     /* respira mejor */
+  margin-bottom: 1.5rem; /* separación con el texto de abajo */
+}
+
+.hero-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 520px;
+  color: #444;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+}
+
+.hero-text p {
+  font-size: 1rem;
+}
+
 /* Botón hero */
 
 .hero-button {
@@ -422,3 +443,4 @@ section.projects {
 .footer-socials a:hover {
   text-decoration: underline;
 }
+
