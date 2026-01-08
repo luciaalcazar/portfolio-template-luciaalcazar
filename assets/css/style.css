@@ -420,8 +420,9 @@ section p {
 }
 
 .projects-grid {
-  max-width: 1450px;
+  max-width: 1450px;              /* ❌ quitamos límite */
   margin: 0 auto;
+  padding: 0 2rem;              /* ✅ mismo aire lateral que header/footer */
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -449,4 +450,14 @@ section p {
 
 .project-card:hover img {
   opacity: 0.9;
+}
+
+/* =============================
+   PROJECTS – OVERRIDE WIDTH
+============================= */
+
+section.projects {
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
 }
