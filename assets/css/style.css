@@ -111,17 +111,19 @@ section:not(.hero):not(.projects) {
 
 .hero {
   position: relative;
-  overflow: hidden; /* 🔑 CLAVE: no puede salirse */
   padding: 6rem 2rem;
-  min-height: 60vh;
+  min-height: calc(100vh - 80px); /* ocupa pantalla sin romper */
+  overflow: hidden; /* 🔑 evita que la imagen se descontrole */
+  background-color: var(--color-bg);
 }
 
 .hero-content {
   max-width: 1450px;
   margin: 0 auto;
+
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center; /* 🔑 evita texto raro */
   position: relative;
   z-index: 2;
 }
@@ -144,17 +146,16 @@ section:not(.hero):not(.projects) {
 
 .hero-illustration {
   position: absolute;
+  right: 5%;
   top: 50%;
-  left: 60%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
   pointer-events: none;
-
-  /* Movimiento suave pero rápido */
-  transition: left 0.15s ease-out, top 0.15s ease-out;
+  z-index: 1;
 }
 
 .hero-illustration img {
-  width: 260px;
+  width: 420px;
+  max-width: 40vw; /* 🔑 responsive real */
 }
 
 /* =============================
