@@ -387,3 +387,26 @@ section p {
 .contact-button:hover {
   background-color: #e9a6b8;
 }
+
+.contact-links {
+  margin-top: 2rem;
+}
+
+.contact-links p {
+  margin-bottom: 1rem;
+}
+
+.contact-links a {
+  font-size: 0.9rem;
+  color: #111;
+}
+
+.contact-links ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.contact-links a:hover {
+  text-decoration: underline;
+}
